@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI会話ネタ メーカー</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>AI会話ネタ メーカー</h1>
+        <header>
+            <h1>AI会話ネタ メーカー</h1>
+            <p class="subtitle">AIがあなたにぴったりの会話のネタを5つ提案します</p>
+        </header>
         
         <div class="settings">
             <div class="setting-group">
@@ -33,29 +39,14 @@
 
         <button id="generate-button">ネタを生成する</button>
 
-        <div class="topic-card">
-            <p id="topic-text">上の条件を選んで、ボタンを押してください。</p>
+        <div class="results-container">
             <div class="spinner" id="spinner" style="display: none;"></div>
-        </div>
-
-        <!-- ...<div class="topic-card">...</div> の下に追加... -->
-
-        <div class="examples">
-            <h2>例えば、こんな話題が生成できます</h2>
-            <ul>
-                <li>もしも時間を止められるなら、何をする？</li>
-                <li>子供の頃、一番好きだったお菓子は何？</li>
-                <li>今までで一番感動した映画のシーンは？</li>
-                <li>最近、一番感謝した出来事ってある？</li>
-                <li>無人島に一つだけ持っていけるとしたら何を持っていく？</li>
-                <li>自分の性格を動物に例えるとしたら何？</li>
-                <li>10年後の自分に手紙を書くとしたら、なんて書く？</li>
-                <li>休みの日に最高の気分転換になることは何？</li>
+            <ul id="topic-list">
+                <!-- ここにAIが生成したネタがリスト表示されます -->
             </ul>
+            <p id="initial-message">上の条件を選んで、ボタンを押してください。</p>
         </div>
-        
-    </div>
-<!-- ...以下省略... -->
+
     </div>
 
     <script src="script.js"></script>
