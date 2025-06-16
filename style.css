@@ -108,3 +108,29 @@ h1 {
         transform: rotate(360deg);
     }
 }
+
+.examples {
+    margin-top: 40px;
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.examples h2 {
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.examples ul {
+    list-style-type: '💬'; /* 絵文字をリストのマーカーにする */
+    padding-left: 20px;
+}
+
+.examples li {
+    padding-left: 10px;
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 0.95rem;
+}
