@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI会話ネタ メーカー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI会話ネタ メーカー</h1>
+        
+        <div class="settings">
+            <div class="setting-group">
+                <label for="depth">会話の深さ:</label>
+                <select id="depth">
+                    <option value="浅いジョークや軽い質問">軽い雑談</option>
+                    <option value="お互いの価値観や考えが少しわかるような普通の質問" selected>普通の会話</option>
+                    <option value="人生観や深い関係性に繋がるような真面目な質問">深い話</option>
+                </select>
+            </div>
+            <div class="setting-group">
+                <label for="relationship">相手との関係:</label>
+                <select id="relationship">
+                    <option value="家族">家族</option>
+                    <option value="恋人">恋人</option>
+                    <option value="友人" selected>友人</option>
+                    <option value="会社の同僚">同僚</option>
+                    <option value="初対面の人">初対面</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="generate-button">ネタを生成する</button>
+
+        <div class="topic-card">
+            <p id="topic-text">上の条件を選んで、ボタンを押してください。</p>
+            <div class="spinner" id="spinner" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

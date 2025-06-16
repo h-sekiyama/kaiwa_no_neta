@@ -1,0 +1,110 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #1c1e21;
+    margin-bottom: 20px;
+}
+
+.settings {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+.setting-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.setting-group label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.setting-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+#generate-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#generate-button:hover {
+    background-color: #0056b3;
+}
+
+#generate-button:disabled {
+    background-color: #a0c7ff;
+    cursor: not-allowed;
+}
+
+.topic-card {
+    position: relative;
+    background-color: #e7f3ff;
+    border-radius: 8px;
+    padding: 30px 20px;
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+#topic-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #0556b3;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

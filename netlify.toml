@@ -1,0 +1,8 @@
+# Netlifyのビルド設定
+[build]
+  command = "npm install" # これでビルdが実行され、package.jsonの道具がインストールされる
+  publish = "."           # 公開ディレクトリはルート(.)
+
+# Netlifyのサーバー機能の設定
+[functions]
+  directory = "netlify/functions/"
