@@ -189,3 +189,32 @@ h1 {
         gap: 15px;
     }
 }
+
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.main-footer a {
+    color: #606770;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .main-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border-top: none;
+        background-color: #f0f2f5;
+        padding-bottom: 40px;
+    }
+}
