@@ -36,6 +36,13 @@ generateButton.addEventListener('click', async () => {
         
         // AIが生成した話題の配列を使ってリストを作成
         if (data.topics && data.topics.length > 0) {
+            // 生成された話題の前にメッセージを表示
+            const messageItem = document.createElement('li');
+            messageItem.className = 'generation-message';
+            messageItem.textContent = `${relationship}との会話用の質問や話題を${data.topics.length}つ生成しました。`;
+            topicList.appendChild(messageItem);
+
+            // 話題を表示
             data.topics.forEach(topic => {
                 const listItem = document.createElement('li');
                 listItem.textContent = topic;

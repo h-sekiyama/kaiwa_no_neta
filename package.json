@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "openai": "^4.0.0"
+    "@anthropic-ai/sdk": "^0.18.0"
   }
 }

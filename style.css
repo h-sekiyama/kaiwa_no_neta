@@ -157,8 +157,17 @@ h1 {
 }
 
 #initial-message {
-    color: #8a8a8a;
+    color: #ff69b4;
     font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 2px dashed #ffd1dc;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* 生成されたネタのリスト */
@@ -188,6 +197,22 @@ h1 {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(255, 182, 193, 0.1);
     border-color: #ff69b4;
+}
+
+/* 生成メッセージのスタイル */
+.generation-message {
+    background-color: #fff5f7 !important;
+    border: 2px dashed #ff69b4 !important;
+    color: #ff69b4 !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+}
+
+.generation-message:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: #ff69b4 !important;
 }
 
 /* ローディングインジケーター */
