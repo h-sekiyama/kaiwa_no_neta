@@ -19,6 +19,7 @@ generateButton.addEventListener('click', async () => {
     generateButton.textContent = '生成中...';
 
     try {
+        console.log('リクエスト送信中:', { depth, relationship });
         const response = await fetch('/.netlify/functions/generate-topic', {
             method: 'POST',
             headers: {
@@ -27,12 +28,15 @@ generateButton.addEventListener('click', async () => {
             body: JSON.stringify({ depth, relationship }),
         });
 
+        console.log('レスポンス受信:', response.status);
         if (!response.ok) {
             const errorData = await response.json();
+            console.error('APIエラー:', errorData);
             throw new Error(errorData.error || `サーバーエラー: ${response.status}`);
         }
 
         const data = await response.json();
+        console.log('受信データ:', data);
         
         // AIが生成した話題の配列を使ってリストを作成
         if (data.topics && data.topics.length > 0) {
@@ -49,11 +53,12 @@ generateButton.addEventListener('click', async () => {
                 topicList.appendChild(listItem);
             });
         } else {
+            console.error('トピックが空:', data);
             throw new Error('有効な話題が生成されませんでした。');
         }
 
     } catch (error) {
-        console.error('エラーが発生しました:', error);
+        console.error('エラーの詳細:', error);
         initialMessage.textContent = 'エラーが発生しました。もう一度お試しください。';
         initialMessage.style.display = 'block';
     } finally {
