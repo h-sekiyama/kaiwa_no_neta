@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI会話ネタ メーカー</title>
+    <title>ネタつくーる 〜AI会話ネタ作成ツール〜</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>AI会話ネタ メーカー</h1>
-            <p class="subtitle">AIがあなたにぴったりの会話のネタを5つ提案します</p>
+            <div class="title-container">
+                <h1>ネタつくーる</h1>
+                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f431.svg" alt="猫のイラスト" class="cat-image">
+            </div>
+            <p class="subtitle">〜AI会話ネタ作成ツール〜</p>
+            <p class="description">AIがあなたにぴったりの会話のネタを5つ提案します</p>
         </header>
         
         <div class="settings">
@@ -40,7 +44,9 @@
         <button id="generate-button">ネタを生成する</button>
 
         <div class="results-container">
-            <div class="spinner" id="spinner" style="display: none;"></div>
+            <div class="loading-indicator" id="loading-indicator" style="display: none;">
+                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f431.svg" alt="読み込み中" class="loading-image">
+            </div>
             <ul id="topic-list">
                 <!-- ここにAIが生成したネタがリスト表示されます -->
             </ul>

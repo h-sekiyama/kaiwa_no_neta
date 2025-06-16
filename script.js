@@ -1,6 +1,6 @@
 const generateButton = document.getElementById('generate-button');
 const topicList = document.getElementById('topic-list');
-const spinner = document.getElementById('spinner');
+const loadingIndicator = document.getElementById('loading-indicator');
 const initialMessage = document.getElementById('initial-message');
 const depthSelect = document.getElementById('depth');
 const relationshipSelect = document.getElementById('relationship');
@@ -14,7 +14,7 @@ generateButton.addEventListener('click', async () => {
     initialMessage.style.display = 'none';
     
     // ローディング表示を開始
-    spinner.style.display = 'block';
+    loadingIndicator.style.display = 'block';
     generateButton.disabled = true;
     generateButton.textContent = '生成中...';
 
@@ -51,7 +51,7 @@ generateButton.addEventListener('click', async () => {
         initialMessage.style.display = 'block';
     } finally {
         // ローディング表示を終了
-        spinner.style.display = 'none';
+        loadingIndicator.style.display = 'none';
         generateButton.disabled = false;
         generateButton.textContent = 'ネタを生成する';
     }
